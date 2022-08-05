@@ -30,7 +30,8 @@ if __name__ == '__main__':
     load_dotenv()
     bitly_token = os.environ['BITLY_TOKEN']
     headers = {"Authorization": f"Bearer {bitly_token}"}
-    parser = argparse.ArgumentParser(description='Данная программа сокращает ссылки и показывает клики по созданным ссылкам')
+    parser = argparse.ArgumentParser(
+        description='Данная программа сокращает ссылки и показывает клики по созданным ссылкам')
     parser.add_argument('link', help='Ваша ссылка')
     args = parser.parse_args()
     long_url = args.link
